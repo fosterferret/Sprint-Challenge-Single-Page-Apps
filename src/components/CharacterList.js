@@ -17,11 +17,23 @@ export default function CharacterList() {
       .catch(error => {
         console.log(error);
       });
-  }, []);
+  }, [characters]);
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+       return (
+            <div class="character-container">
+              <CharacterCard
+                key={index}
+                name={character.name}
+                species={character.species}
+                status={character.status}
+                episodes={character.episode}
+                image={character.image}
+                location={character.location.name}
+              />
+            </div>
+          );
     </section>
   );
 }
