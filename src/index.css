@@ -71,3 +71,167 @@ img.header-img {
 .header-left img, .header-right h2 {
   margin-left: 5%;
 }
+
+.tab {
+  background-color: rgb(29, 29, 41);
+}
+
+section.welcome-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.welcome-page h1 {
+  font-family: 'Englebert', sans-serif;
+  font-size: 45px;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1px;
+  padding: 1px;
+ 
+}
+
+.episodes-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.locations-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.character-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background: #ECD22E;
+  height: 460px;
+  margin: 3px;
+  border-radius: 15px;
+}
+
+.character-container img {
+  width: 100%;
+  height: 270px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.character-container h2 {
+  font-family: Englebert;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 23px;
+  color: #000000;
+  text-shadow: 5px 4px 4px rgba(34, 193, 79, 0.25)
+}
+
+.character-container p {
+  font-family: Lacquer;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #715CBE;
+}
+
+.character-container .footer p {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 auto;
+  color: #FAFAFA;
+  margin-top: 4px;
+ 
+}
+
+.footer {
+  background-color: #715CBE;
+  height: 100%;
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.search-form {
+  margin-top: 50px;
+}
+
+
+.searchBox {
+  position: absolute;
+  left: 50%;
+  transform:  translate(-50%,50%);
+  background: #2f3640;
+  height: 45px;
+  border-radius: 40px;
+  padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+background: white;
+color : #2f3640;
+}
+
+.searchButton {
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border:none;
+  background: none;
+  outline:none;
+  float:left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+  width: 150px;
+  padding: 0 6px;
+}
+}
