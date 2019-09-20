@@ -1,6 +1,13 @@
 import React from "react";
 
-export default function CharacterCard() {
+export default function CharacterCard({
+  image,
+  name,
+  species,
+  episodes,
+  status,
+  location
+}) {
   return (
     <>
       {/* <img className="rm-logo" alt="logo"/> */}
