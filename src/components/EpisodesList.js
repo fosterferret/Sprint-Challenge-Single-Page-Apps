@@ -7,7 +7,7 @@ function EpisodesList() {
 
   useEffect(() => {
     axios
-      //.get("https://rickandmortyapi.com/api/episode/")
+      .get("https://rickandmortyapi.com/api/episode/")
       .then(res => {
         debugger;
         setEpisodes(res.data.results);
