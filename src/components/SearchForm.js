@@ -12,6 +12,21 @@ export default function SearchForm() {
     setSearch(query);
   };
 
+  const fetchCharacter = async () => {
+    let queryString = "";
+
+    if (search) {
+      queryString = `?name=${search}`;
+      const response = await axios(`https://rickandmortyapi.com/api/character/${queryString}`);
+      
+      setResults(response.data.results);
+    }
+  };
+
+  useEffect(() => {
+    searchCharacter();
+  }, [search]);
+
  
   return (
     <>
