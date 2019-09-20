@@ -41,11 +41,6 @@ class TabNav extends Component {
             onClick={this.handleItemClick}
           />
           </NavLink>
-          <Menu.Menu position='right'>
-            <Menu.Item>
-              <Input icon='search' placeholder='Search...' />
-            </Menu.Item>
-          </Menu.Menu>
         </Menu>
       </div>
     )
