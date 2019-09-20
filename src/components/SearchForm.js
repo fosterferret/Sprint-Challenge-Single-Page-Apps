@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 
 export default function SearchForm() {
+  // STRETCH TODO: Add stateful logic for query/form data
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
@@ -12,22 +13,23 @@ export default function SearchForm() {
     setSearch(query);
   };
 
-  const fetchCharacter = async () => {
+  const searchCharacter = async () => {
     let queryString = "";
 
     if (search) {
       queryString = `?name=${search}`;
-      const response = await axios(`https://rickandmortyapi.com/api/character/${queryString}`);
-      
+      const response = await axios(
+        `https://rick-api.herokuapp.com/api/character/${queryString}`
+      );
+
       setResults(response.data.results);
     }
   };
 
   useEffect(() => {
-    fetchCharacter();
+    searchCharacter();
   }, [search]);
 
- 
   return (
     <>
       <section className="search-form">
@@ -40,7 +42,7 @@ export default function SearchForm() {
             className="searchInput"
           />
           <button type="submit" className="searchButton">
-            <i className="material-icons">Search</i>
+            <i class="material-icons">search</i>
           </button>
         </form>
       </section>

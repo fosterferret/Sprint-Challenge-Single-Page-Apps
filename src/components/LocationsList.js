@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import LocationCard from "./LocationCard";
-import axios from "axios";
+import LocationCard from './LocationCard';
+import axios from 'axios';
 
 export default function LocationsList() {
   const [locations, setLocations] = useState([]);
@@ -16,19 +16,20 @@ export default function LocationsList() {
       });
   }, [locations]);
 
+
   return (
     <section className="location-list grid-view">
-      {locations.map((location, index) => {
-        return (
-          <LocationCard
-            key={index}
-            name={location.name}
-            type={location.type}
-            dimension={location.dimension}
-            residents={location.residents.length}
-          />
-        );
-      })}
+        {locations.map((location, index) => {
+          return (
+            <LocationCard
+              key={index}
+              name={location.name}
+              type = {location.type}
+              dimension={location.dimension}
+              residents={location.residents.length}
+            />
+          );
+        })}
     </section>
-  );
+  )
 }
