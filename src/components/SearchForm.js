@@ -24,7 +24,7 @@ export default function SearchForm() {
   };
 
   useEffect(() => {
-    searchCharacter();
+    fetchCharacter();
   }, [search]);
 
  
